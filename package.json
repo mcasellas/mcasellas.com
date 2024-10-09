@@ -27,11 +27,14 @@
   "homepage": "https://github.com/rampatra/photography#readme",
   "devDependencies": {
     "del": "^4.1.1",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-image-resize": "^0.13.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.0",
     "sass": "^1.25.0"
+  },
+  "dependencies": {
+    "gulp-cli": "^3.0.0"
   }
 }
