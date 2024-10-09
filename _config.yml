@@ -6,12 +6,12 @@ image_thumbs_loc: "/images/thumbs"
 #google_analytics: "UA-46465113-2"
 
 # UI configs
-title: "Marc Casellas Photography"
+title: "Marc Casellas | Photography"
 subtitle: "See the world through my lenses!"
 author: "Marc Casellas"
 header:
- title: "Photography"
- subtitle: "by Marc Casellas"
+ title: "Marc Casellas"
+ subtitle: "Photography"
 footer:
  name: "Hey there, my name is Marc"
  bio: "I am a computer engineer and a photography enthusiast from Catalonia. Love making teeny tiny apps solving tiny problems in life and now learning photography."
