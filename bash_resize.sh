@@ -1,10 +1,11 @@
 for file in images/*; do
     if [ -f "$file" ]; then  # Check if it's a regular file
-        new_name=$(echo "$file" | tr '-' ' ' | tr '_' ' ')
-        mv "$file" "$new_name"
+        # Remove leading hyphens and underscores
+        new_name=$(echo "$file" | sed 's|^[_-]*||')
+        mv "$file" "$(dirname "$file")/$new_name"
     fi
 done
-echo "Files renamed to avoid hyphens and underscores."
+echo "Files renamed to remove leading hyphens and underscores."
 cp images/* images/fulls
 cp images/fulls/* images/thumbs
 echo "images transferred"
