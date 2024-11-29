@@ -17,7 +17,8 @@ layout: default
 
     <!-- Main -->
     <div id="main" data-exif='{{ site.exif }}'>
-        {% assign shuffled_images = site.static_files | shuffle %}
+        {% assign n = site.static_files | size %}
+        {% assign shuffled_images = site.static_files | sample: n %}
         {% for image in shuffled_images %}
         {% if image.path contains 'fulls' %}
         <article class="thumb">
