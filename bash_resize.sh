@@ -10,17 +10,30 @@ echo "Files renamed to remove leading hyphens and underscores."
 
 # Step 2: Copy images to fulls and thumbs directories
 cp images/* images/fulls
-cp images/fulls/* images/thumbs
 echo "Images transferred."
 
-# Step 3: Remove original images with specific extensions
+# Step 3: Resize images in thumbs directory
+for f in images/*; do
+    if [ -f "$f" ]; then
+        base=$(basename "$f")
+        convert "$f" -resize 510 "images/thumbs/$base"
+        echo "Creating thumbnail for $f"
+    fi
+done
+echo "Thumbnails generated."
+
+# Step 4: Remove original images with specific extensions
 rm images/*.jpg
 rm images/*.JPG
 rm images/*.png
 echo "Original images removed."
 
-# Step 4: Resize images in thumbs directory
-for f in images/thumbs/*; do
-    convert "$f" -resize 510 "$f"
+# Step 5: Remove orphan thumbs (files in thumbs without a corresponding file in fulls)
+for thumb in images/thumbs/*; do
+    base=$(basename "$thumb")
+    if [ ! -f "images/fulls/$base" ]; then
+        echo "Deleting orphan thumb: $thumb"
+        rm "$thumb"
+    fi
 done
-echo "Thumbnails generated."
+echo "Orphan thumbs removed."
