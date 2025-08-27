@@ -6,15 +6,15 @@ image_thumbs_loc: "/images/thumbs"
 google_analytics: "G-Z5WLMK71GC"
 
 # UI configs
-title: "Marc Casellas | Fotografia"
-subtitle: "See the world through my lenses!"
+title: "Marc Casellas"
+subtitle: "Fotografia"
 author: "Marc Casellas"
 header:
  title: "Marc Casellas"
  subtitle: "Fotografia"
 footer:
  name: "Hola, soc en Marc"
- bio: "Nascut a la comarca d'Osona, Catalunya. Sóc enginyer informàtic de professió i un apassionat per la ràdio i a la fotografia."
+ bio: "Nascut a la comarca d'Osona, Catalunya. Sóc enginyer informàtic de professió i un aficionat a la ràdio i a la fotografia."
  github: "M'encanta capturar moments a través de la fotografia de carrer i viatge, però també gaudeixo de la fotografia de paisatge. Aquesta n'és una petita mostra a mode de portfolio."
 # web_design: "AJ"
 # Configure which exif data to display

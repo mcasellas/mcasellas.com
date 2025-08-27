@@ -10,6 +10,16 @@ echo "Files renamed to remove leading hyphens and underscores."
 
 # Step 2: Copy images to fulls and thumbs directories
 cp images/* images/fulls
+# Logo
+# for f in images/*; do
+#     [ -f "$f" ] || continue
+#     base=$(basename "$f")
+#     convert "$f" logo.png \
+#         -gravity southeast \        # cantonada inferior dreta
+#         -geometry +20+20 \          # marge 20px horitzontal i vertical
+#         -composite "$f"
+#     echo "Watermarked $base"
+# done
 echo "Images transferred."
 
 # Step 3: Resize images in thumbs directory
@@ -21,6 +31,8 @@ for f in images/*; do
     fi
 done
 echo "Thumbnails generated."
+
+
 
 # Step 4: Remove original images with specific extensions
 rm images/*.jpg
