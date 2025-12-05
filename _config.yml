@@ -1,6 +1,6 @@
 # Base configs
-baseurl: "https://mcasellas.com"
-#baseurl: "" # Comment the above line and uncomment this to test the website locally
+# baseurl: "https://mcasellas.com"
+baseurl: "" # Comment the above line and uncomment this to test the website locally
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
 google_analytics: "G-Z5WLMK71GC"
@@ -13,9 +13,9 @@ header:
  title: "Marc Casellas"
  subtitle: "Fotografia"
 footer:
- name: "Hola, soc en Marc"
- bio: "Nascut a la comarca d'Osona, Catalunya. Sóc enginyer informàtic de professió i un aficionat a la ràdio i a la fotografia."
- github: "M'encanta capturar moments a través de la fotografia de carrer i viatge, però també gaudeixo de la fotografia de paisatge. Aquesta n'és una petita mostra a mode de portfolio."
+ name: "Hola, sóc en Marc"
+ bio: "Nascut a la comarca d'Osona, Catalunya. Sóc enginyer informàtic de professió i un apassionat de la ràdio i la fotografia."
+ github: "A través de la fotografia de carrer i de viatge busco capturar instants espontanis i històries úniques, sense deixar de banda la calma i la bellesa de la fotografia de paisatge. Aquest espai és una petita mostra del meu univers visual, a mode de portfolio."
 # web_design: "AJ"
 # Configure which exif data to display
 # Tag is the actual exif tag, icon is a fontawesome icon. Use JSON notation without line breaks

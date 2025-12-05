@@ -1,15 +1,20 @@
 # Step 1: Rename all files in images/* to remove leading hyphens and underscores
 for file in images/*; do
     if [ -f "$file" ]; then  # Check if it's a regular file
+        base=$(basename "$file")
+        echo "Compressing $file"
+        
         # Remove leading hyphens and underscores
         new_name=$(echo "$(basename "$file")" | sed 's|^[_-]*||')
-        mv "$file" "images/$new_name"
+
+        convert "$file" -quality 60 "images/fulls/$new_name"
     fi
 done
 echo "Files renamed to remove leading hyphens and underscores."
 
 # Step 2: Copy images to fulls and thumbs directories
-cp images/* images/fulls
+# cp images/* images/fulls
+
 # Logo
 # for f in images/*; do
 #     [ -f "$f" ] || continue
@@ -20,13 +25,13 @@ cp images/* images/fulls
 #         -composite "$f"
 #     echo "Watermarked $base"
 # done
-echo "Images transferred."
+# echo "Images transferred."
 
 # Step 3: Resize images in thumbs directory
 for f in images/*; do
     if [ -f "$f" ]; then
         base=$(basename "$f")
-        convert "$f" -resize 510 "images/thumbs/$base"
+        convert "$f" -quality 60 -resize 510 "images/thumbs/$base"
         echo "Creating thumbnail for $f"
     fi
 done
